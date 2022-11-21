@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.button-add {
+    padding: 1rem;
+    margin: 1rem .5rem;
+    border-radius: 8px;
+    color: rgb(246, 248, 246);
+    background-color: rgb(142, 167, 120);
+    font: 100;
+    width: 10%;
+}
+
+.task-input {
+    margin: 1rem .5rem;
+    justify-content: center;
+    text-align: center;
+    width: 40%;
+    margin-top: 3%;
+    padding: 1rem;
+    border-radius: 10px;
+    color: rgb(24, 2, 27);
+    background-color: rgb(240, 229, 229);
+
+
+
+}
+
+.listData {
+    padding: 1rem;
+    background-color: rgb(13, 147, 165);
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-top: 1%;
+    border-radius: 10px;
+    justify-content: space-between;
+    width: 40%;
+}
