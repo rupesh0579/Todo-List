@@ -15,6 +15,10 @@ const Form = () => {
         setTodo(todo.filter((e, i) => i !== id));
     }
 
+    function removeAll() {
+        setTodo([]);
+    }
+
     return (
         <Fragment>
             <input className='task-input' type="text"
@@ -27,6 +31,8 @@ const Form = () => {
             ></input>
             <button className='button-add' onClick={addInput} type='submit'>Add</button>
             <List todo={todo} removeItem={removeItem} />
+            {todo.length > 1 &&
+                <button onClick={removeAll}>Remove All</button>}
 
         </Fragment>
     )
