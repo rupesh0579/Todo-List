@@ -3,13 +3,17 @@ import List from './list';
 
 const Form = () => {
     const [input, setInput] = useState("");
-    const [todo, setTodos] = useState([]);
+    const [todo, setTodo] = useState([]);
     function addInput() {
-        setTodos([...todo, input])
+        setTodo([...todo, input])
         console.log(todo)
         setInput("");
     }
 
+
+    function removeItem(id) {
+        setTodo(todo.filter((e, i) => i !== id));
+    }
 
     return (
         <Fragment>
@@ -22,7 +26,7 @@ const Form = () => {
                 }}
             ></input>
             <button className='button-add' onClick={addInput} type='submit'>Add</button>
-            <List todo={todo} />
+            <List todo={todo} removeItem={removeItem} />
 
         </Fragment>
     )

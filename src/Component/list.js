@@ -13,6 +13,7 @@ const List = (props) => {
                     <ul>
                         <li className='listData' key={i}>
                             {data}
+                            <button className='remove' onClick={(e) => props.removeItem(i)}>Remove</button>
                         </li>
                     </ul>
                 )
